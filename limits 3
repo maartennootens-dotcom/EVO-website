@@ -1,0 +1,18 @@
+// Maximum number of modules a user can generate per day
+const MAX_MODULES = 5;
+
+// Allowed categories for safe evolution
+const ALLOWED_CATEGORIES = ["AI Tool", "Life Helper", "Knowledge"];
+
+// Check if the request is allowed
+function isRequestAllowed(category, dashboardCount) {
+  if (!ALLOWED_CATEGORIES.includes(category)) {
+    alert("This type of module is not allowed.");
+    return false;
+  }
+  if (dashboardCount >= MAX_MODULES) {
+    alert("Daily module limit reached. Come back tomorrow!");
+    return false;
+  }
+  return true;
+}
