@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVO | The Evolving Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>EVO | Your Personal Assistant</h1>
+    <input type="text" id="userInput" placeholder="Type what you need today..." />
+    <button id="submitBtn">Generate Module</button>
+    
+    <h2>Your Dashboard</h2>
+    <div id="dashboard" class="dashboard"></div>
+  </div>
+
+  <script src="limits.js"></script>
+  <script src="modules.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
