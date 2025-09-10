@@ -1,0 +1,6 @@
+// Predefined module templates
+const MODULE_TEMPLATES = {
+  "AI Tool": { title: "AI Text Rewriter", content: "Paste text to improve grammar and style." },
+  "Life Helper": { title: "Focus Timer", content: "Start a 25-minute focus session." },
+  "Knowledge": { title: "Quick Guide", content: "Learn something new in 5 minutes." }
+};
