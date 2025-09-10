@@ -1,0 +1,27 @@
+const userInput = document.getElementById("userInput");
+const submitBtn = document.getElementById("submitBtn");
+const dashboard = document.getElementById("dashboard");
+
+let dashboardCount = 0;
+
+submitBtn.addEventListener("click", () => {
+  const input = userInput.value.toLowerCase();
+  let category;
+
+  // Simple keyword detection
+  if (input.includes("ai") || input.includes("rewrite") || input.includes("text")) category = "AI Tool";
+  else if (input.includes("focus") || input.includes("planner") || input.includes("habit")) category = "Life Helper";
+  else category = "Knowledge";
+
+  // Check against limits
+  if (!isRequestAllowed(category, dashboardCount)) return;
+
+  // Generate module
+  const template = MODULE_TEMPLATES[category];
+  const moduleCard = document.createElement("div");
+  moduleCard.classList.add("module-card");
+  moduleCard.innerHTML = `<h3>${template.title}</h3><p>${template.content}</p>`;
+  
+  dashboard.appendChild(moduleCard);
+  dashboardCount++;
+});
